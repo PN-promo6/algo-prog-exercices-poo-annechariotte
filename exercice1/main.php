@@ -12,5 +12,3 @@ class Book {
 
 $book1 = new Book("Spirou", 12);
 print_r($book1);
-
-?>
