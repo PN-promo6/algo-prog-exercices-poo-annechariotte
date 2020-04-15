@@ -21,22 +21,18 @@ class ConcertTicket {
     };
 
     String htmlDetails() {
-        String htmlContent =
-        "<p>Nom de l'artiste : " + this.artist +
-        "</p> <p>Ville : " + this.city +
-        "</p> <p>Date : " + this.date +
-        "</p> <p>Numéro de la place : " + this.placeNumber +
-        "</p>";
+        String htmlContent = "<p>Nom de l'artiste : " + this.artist + "</p> <p>Ville : " + this.city + "</p> <p>Date : " + this.date + "</p> <p>Numéro de la place : " + this.placeNumber + "</p>";
          if(this.clientName != "") {
             htmlContent = htmlContent + "<p>Nom du titulaire : " + this.clientName + "</p>";
         }
+        return htmlContent;
     };
 }
 class Playground {
     public static void main(String[ ] args) {
       ConcertTicket ticket01 = new ConcertTicket("Dalida", "27.03", "Marseille", 1, "AnneChariotte");
-      ConcertTicket ticket01 = new ConcertTicket("Dalida", "27.03", "Marseille", 1);
-      System.out.print(ticket01.htmlDetails());
-      System.out.print(ticket02.htmlDetails());
+      ConcertTicket ticket02 = new ConcertTicket("Dalida", "27.03", "Marseille", 1);
+      System.out.println(ticket01.htmlDetails());
+      System.out.println(ticket02.htmlDetails());
     }
 }
